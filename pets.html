@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Pets - PurfectFinds</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/pets.css">
+</head>
+<body>
+      
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo"> <img src="public/Logo.png" alt="">
+                
+                <ul class="nav-links">
+                    <li><a href="pets.html" class="active">Find Pets</a></li>
+                    <li><a href="breeders.html">Breeders</a></li>
+                    <li><a href="supplies.html">Supplies</a></li>
+                    <li><a href="vet.html">Vet Consultation</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="pets.html">Find Pets</a></li>
+            <li><a href="breeders.html">Breeders</a></li>
+            <li><a href="supplies.html">Supplies</a></li>
+            <li><a href="vet.html">Vet Consultation</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </div>
+
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>Find Your Perfect Pet</h1>
+            <p>Browse through our verified collection of healthy, happy pets</p>
+        </div>
+    </section>
+
+      
+    <section class="pets-section">
+        <div class="container">
+            <div class="pets-layout">
+                 
+                <aside class="filters-sidebar">
+                    <div class="filters-header">
+                        <h3>Filters</h3>
+                        <button class="btn-text" id="clearFilters">Clear All</button>
+                    </div>
+
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Search</label>
+                        <input type="text" id="searchInput" class="filter-input" placeholder="Search by name or breed...">
+                    </div>
+
+                      
+                    <div class="filter-group">
+                        <label class="filter-label">Category</label>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="dogs">
+                                <span>Dogs</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="cats">
+                                <span>Cats</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="birds">
+                                <span>Birds</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="small-pets">
+                                <span>Small Pets</span>
+                            </label>
+                        </div>
+                    </div>
+
+                      
+                    <div class="filter-group">
+                        <label class="filter-label">Age</label>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="age" value="0-3">
+                                <span>0-3 months</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="age" value="3-6">
+                                <span>3-6 months</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="age" value="6-12">
+                                <span>6-12 months</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="age" value="12+">
+                                <span>1+ years</span>
+                            </label>
+                        </div>
+                    </div>
+
+                      
+                    <div class="filter-group">
+                        <label class="filter-label">Gender</label>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="gender" value="male">
+                                <span>Male</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="gender" value="female">
+                                <span>Female</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Price Range</label>
+                        <div class="price-inputs">
+                            <input type="number" id="minPrice" placeholder="Min" class="price-input">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" placeholder="Max" class="price-input">
+                        </div>
+                    </div>
+
+                     
+                    <div class="filter-group">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" id="verifiedOnly">
+                            <span>Verified Breeders Only</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" id="vaccinatedOnly">
+                            <span>Vaccinated Only</span>
+                        </label>
+                    </div>
+                </aside>
+
+                  
+                <div class="pets-content">
+                    <div class="pets-toolbar">
+                        <div class="results-count" id="resultsCount">Showing 0 pets</div>
+                        <select id="sortBy" class="sort-select">
+                            <option value="newest">Newest First</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="age">Age: Youngest First</option>
+                        </select>
+                    </div>
+
+                    <div class="pet-grid" id="petsGrid">
+                        
+                    </div>
+
+                    <div class="no-results" id="noResults" style="display: none;">
+                        <div class="no-results-icon">🔍</div>
+                        <h3>No pets found</h3>
+                        <p>Try adjusting your filters to see more results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                      <a href="index.html" class="logo"> <img src="public/Logo.png" alt="">
+                    </div>
+                    <p class="footer-desc">Connecting pet lovers with verified breeders for a lifetime of companionship</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="pets.html">Find Pets</a></li>
+                        <li><a href="breeders.html">Breeders</a></li>
+                        <li><a href="supplies.html">Supplies</a></li>
+                        <li><a href="vet.html">Vet Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PurfectFinds. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/pets.js"></script>
+</body>
+</html>

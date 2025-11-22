@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PurfectFinds - Find Your Perfect Pet Companion</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo"> <img src="public/Logo.png" alt="">
+
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="pets.html">Find Pets</a></li>
+                    <li><a href="breeders.html">Breeders</a></li>
+                    <li><a href="supplies.html">Supplies</a></li>
+                    <li><a href="vet.html">Vet Consultation</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="pets.html">Find Pets</a></li>
+            <li><a href="breeders.html">Breeders</a></li>
+            <li><a href="supplies.html">Supplies</a></li>
+            <li><a href="vet.html">Vet Consultation</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </div>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Find Your Perfect Pet Companion</h1>
+                <p class="hero-subtitle">Connect with verified breeders and discover healthy, happy pets ready for their
+                    forever home</p>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Search by breed, type, or location..." class="search-input"
+                        id="heroSearch">
+                    <button class="btn-primary search-btn">Search</button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">2,500+</div>
+                        <div class="stat-label">Available Pets</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Verified Breeders</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Happy Families</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="category-grid">
+                <a href="pets.html?category=dogs" class="category-card">
+                    <div class="category-icon">🐕</div>
+                    <h3>Dogs</h3>
+                    <p>1,200+ available</p>
+                </a>
+                <a href="pets.html?category=cats" class="category-card">
+                    <div class="category-icon">🐈</div>
+                    <h3>Cats</h3>
+                    <p>800+ available</p>
+                </a>
+                <a href="pets.html?category=birds" class="category-card">
+                    <div class="category-icon">🦜</div>
+                    <h3>Birds</h3>
+                    <p>300+ available</p>
+                </a>
+                <a href="pets.html?category=small-pets" class="category-card">
+                    <div class="category-icon">🐰</div>
+                    <h3>Small Pets</h3>
+                    <p>200+ available</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="featured-pets">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Pets</h2>
+                <a href="pets.html" class="view-all-link">View All →</a>
+            </div>
+
+            <div class="pet-grid" id="featuredPetsGrid">
+                Pets will be loaded dynamically
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose PurfectFinds?</h2>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">✓</div>
+                    <h3>Verified Breeders</h3>
+                    <p>All breeders are thoroughly vetted and certified to ensure ethical breeding practices</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🏥</div>
+                    <h3>Health Guaranteed</h3>
+                    <p>Every pet comes with complete health records and vaccination certificates</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">💬</div>
+                    <h3>Expert Support</h3>
+                    <p>Access to veterinary consultations and pet care advice whenever you need it</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🔒</div>
+                    <h3>Secure Transactions</h3>
+                    <p>Safe and secure payment processing with buyer protection guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Perfect Pet?</h2>
+                <p>Join thousands of happy pet owners who found their companions through PurfectFinds</p>
+                <div class="cta-buttons">
+                    <a href="pets.html" class="btn-primary btn-large">Browse Pets</a>
+                    <a href="breeders.html" class="btn-secondary btn-large">Find Breeders</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo"> <img src="public/Logo.png" alt="">
+
+                    </div>
+                    <p class="footer-desc">Connecting pet lovers with verified breeders for a lifetime of companionship
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="pets.html">Find Pets</a></li>
+                        <li><a href="breeders.html">Breeders</a></li>
+                        <li><a href="supplies.html">Supplies</a></li>
+                        <li><a href="vet.html">Vet Consultation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 PurfectFinds. All rights reserved.</p><br>
+                <p>AMAN PRAJAPATI | ISHITA PRAJAPTI | BHAWNA GAUTAM </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Consultation - PurfectFinds</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/vet-booking.css">
+</head>
+<body>
+      
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+               <a href="index.html" class="logo"> <img src="public/Logo.png" alt="">
+                
+                <ul class="nav-links">
+                    <li><a href="pets.html">Find Pets</a></li>
+                    <li><a href="breeders.html">Breeders</a></li>
+                    <li><a href="supplies.html">Supplies</a></li>
+                    <li><a href="vet.html">Vet Consultation</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="pets.html">Find Pets</a></li>
+            <li><a href="breeders.html">Breeders</a></li>
+            <li><a href="supplies.html">Supplies</a></li>
+            <li><a href="vet.html">Vet Consultation</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </div>
+
+    
+    <section class="booking-section">
+        <div class="container">
+            <a href="vet.html" class="back-link">← Back to veterinarians</a>
+            
+            <div class="booking-layout">
+               
+                <aside class="vet-info-sidebar" id="vetInfoSidebar">
+                     Vet info will be loaded dynamically 
+                </aside>
+
+                  
+                <div class="booking-form-container">
+                    <h2>Book a Consultation</h2>
+                    
+                    <form id="bookingForm" class="booking-form">
+                         
+                        <div class="form-group">
+                            <label class="form-label">Consultation Type</label>
+                            <div class="consultation-types">
+                                <label class="consultation-type-card">
+                                    <input type="radio" name="consultationType" value="video" checked>
+                                    <div class="type-content">
+                                        <div class="type-icon">📹</div>
+                                        <div class="type-name">Video Call</div>
+                                        <div class="type-price">$50</div>
+                                    </div>
+                                </label>
+                                <label class="consultation-type-card">
+                                    <input type="radio" name="consultationType" value="chat">
+                                    <div class="type-content">
+                                        <div class="type-icon">💬</div>
+                                        <div class="type-name">Chat</div>
+                                        <div class="type-price">$30</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                         
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="consultationDate">Preferred Date</label>
+                                <input type="date" id="consultationDate" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="consultationTime">Preferred Time</label>
+                                <select id="consultationTime" class="form-input" required>
+                                    <option value="">Select time</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                          
+                        <div class="form-group">
+                            <label class="form-label" for="petName">Pet Name</label>
+                            <input type="text" id="petName" class="form-input" placeholder="Enter your pet's name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="petType">Pet Type</label>
+                                <select id="petType" class="form-input" required>
+                                    <option value="">Select type</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="bird">Bird</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="petAge">Pet Age</label>
+                                <input type="text" id="petAge" class="form-input" placeholder="e.g., 2 years" required>
+                            </div>
+                        </div>
+
+                          
+                        <div class="form-group">
+                            <label class="form-label" for="consultationReason">Reason for Consultation</label>
+                            <textarea id="consultationReason" class="form-textarea" rows="4" placeholder="Please describe your pet's symptoms or concerns..." required></textarea>
+                        </div>
+
+                         
+                        <div class="form-group">
+                            <label class="form-label" for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" class="form-input" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" class="form-input" placeholder="(555) 123-4567" required>
+                        </div>
+
+                         
+                        <button type="submit" class="btn-primary btn-large">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                      <a href="index.html" class="logo"> <img src="public/Logo.png" alt="">
+                    </div>
+                    <p class="footer-desc">Connecting pet lovers with verified breeders for a lifetime of companionship</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="pets.html">Find Pets</a></li>
+                        <li><a href="breeders.html">Breeders</a></li>
+                        <li><a href="supplies.html">Supplies</a></li>
+                        <li><a href="vet.html">Vet Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PurfectFinds. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/vet-booking.js"></script>
+</body>
+</html>

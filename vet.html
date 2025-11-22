@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary Consultation - PurfectFinds</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/vet.css">
+</head>
+<body>
+      
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo"> <img src="public/Logo.png" alt="">
+                
+                <ul class="nav-links">
+                    <li><a href="pets.html">Find Pets</a></li>
+                    <li><a href="breeders.html">Breeders</a></li>
+                    <li><a href="supplies.html">Supplies</a></li>
+                    <li><a href="vet.html" class="active">Vet Consultation</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+     
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="pets.html">Find Pets</a></li>
+            <li><a href="breeders.html">Breeders</a></li>
+            <li><a href="supplies.html">Supplies</a></li>
+            <li><a href="vet.html">Vet Consultation</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </div>
+
+     
+    <section class="page-header">
+        <div class="container">
+            <h1>Veterinary Consultation</h1>
+            <p>Connect with licensed veterinarians for expert pet care advice</p>
+        </div>
+    </section>
+
+     
+    <section class="vet-section">
+        <div class="container">
+            <div class="vet-toolbar">
+                <input type="text" id="searchVets" class="search-input" placeholder="Search by name or specialty...">
+                <select id="filterSpecialty" class="filter-select">
+                    <option value="">All Specialties</option>
+                    <option value="general">General Practice</option>
+                    <option value="surgery">Surgery</option>
+                    <option value="dental">Dental Care</option>
+                    <option value="emergency">Emergency Care</option>
+                    <option value="nutrition">Nutrition</option>
+                </select>
+            </div>
+
+            <div class="vets-grid" id="vetsGrid">
+                
+            </div>
+        </div>
+    </section>
+
+      
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                       <a href="index.html" class="logo"> <img src="public/Logo.png" alt="">
+                    </div>
+                    <p class="footer-desc">Connecting pet lovers with verified breeders for a lifetime of companionship</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="pets.html">Find Pets</a></li>
+                        <li><a href="breeders.html">Breeders</a></li>
+                        <li><a href="supplies.html">Supplies</a></li>
+                        <li><a href="vet.html">Vet Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PurfectFinds. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/vet.js"></script>
+</body>
+</html>

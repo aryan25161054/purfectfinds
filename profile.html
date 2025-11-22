@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - PurfectFinds</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12 12-5.373 12-12S22.627 4 16 4zm0 18c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z" fill="currentColor"/>
+          </svg>
+          <span>PurfectFinds</span>
+        </a>
+        <nav class="nav desktop-nav">
+          <a href="pets.html">Find Pets</a>
+          <a href="breeders.html">Breeders</a>
+          <a href="supplies.html">Supplies</a>
+          <a href="vet.html">Vet Consultation</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn-icon cart-btn" id="cartBtn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M6 16a2 2 0 100 4 2 2 0 000-4zm8 0a2 2 0 100 4 2 2 0 000-4zM.5 1a.5.5 0 000 1h1.67l2.65 9.28a2 2 0 001.92 1.42h8.52a2 2 0 001.92-1.42l2.32-8.08H4.82L4.4 1.72A1 1 0 003.42 1H.5z" fill="currentColor"/>
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+          <div class="user-menu">
+            <button class="btn-icon" id="userMenuBtn">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 10a4 4 0 100-8 4 4 0 000 8zm0 2c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z" fill="currentColor"/>
+              </svg>
+            </button>
+            <div class="user-dropdown" id="userDropdown">
+              <a href="profile.html">My Profile</a>
+              <a href="#" id="logoutBtn">Logout</a>
+            </div>
+          </div>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav">
+      <a href="pets.html">Find Pets</a>
+      <a href="breeders.html">Breeders</a>
+      <a href="supplies.html">Supplies</a>
+      <a href="vet.html">Vet Consultation</a>
+      <a href="profile.html">My Profile</a>
+      <a href="#" id="mobileLogoutBtn">Logout</a>
+    </nav>
+  </div>
+
+  <main class="profile-page">
+    <div class="container">
+      <div class="profile-header">
+        <h1>My Profile</h1>
+        <p>Manage your account settings and preferences</p>
+      </div>
+
+      <div class="profile-content">
+        <div class="profile-sidebar">
+          <nav class="profile-nav">
+            <a href="#" class="active" data-tab="account">Account Details</a>
+            <a href="#" data-tab="favorites">Saved Pets</a>
+            <a href="#" data-tab="orders">Order History</a>
+            <a href="#" data-tab="appointments">Appointments</a>
+            <a href="#" data-tab="settings">Settings</a>
+          </nav>
+        </div>
+
+        <div class="profile-main">
+          <div class="tab-content active" id="account">
+            <div class="profile-card">
+              <div class="card-header">
+                <h2>Account Details</h2>
+                <button class="btn btn-secondary" id="editProfileBtn">Edit Profile</button>
+              </div>
+              <form class="profile-form" id="profileForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" disabled>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <textarea id="address" name="address" rows="3" placeholder="123 Main St, City, State 12345" disabled></textarea>
+                </div>
+                <div class="form-actions" style="display: none;" id="formActions">
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+                  <button type="button" class="btn btn-secondary" id="cancelEditBtn">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="tab-content" id="favorites">
+            <div class="profile-card">
+              <h2>Saved Pets</h2>
+              <div class="saved-pets-grid" id="savedPetsGrid">
+                <p class="empty-state">You haven't saved any pets yet. Browse our <a href="pets.html" class="link">pet listings</a> to find your perfect companion!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="orders">
+            <div class="profile-card">
+              <h2>Order History</h2>
+              <div class="orders-list" id="ordersList">
+                <p class="empty-state">You haven't placed any orders yet. Check out our <a href="supplies.html" class="link">pet supplies</a>!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="appointments">
+            <div class="profile-card">
+              <h2>Veterinary Appointments</h2>
+              <div class="appointments-list" id="appointmentsList">
+                <p class="empty-state">You don't have any appointments scheduled. <a href="vet.html" class="link">Book a consultation</a> with our veterinarians!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="settings">
+            <div class="profile-card">
+              <h2>Account Settings</h2>
+              <div class="settings-section">
+                <h3>Email Notifications</h3>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="emailNewPets" checked>
+                  <span>New pet listings matching my preferences</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="emailPromotions" checked>
+                  <span>Promotions and special offers</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="emailUpdates">
+                  <span>Product updates and news</span>
+                </label>
+              </div>
+              <div class="settings-section">
+                <h3>Privacy</h3>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="profilePublic">
+                  <span>Make my profile visible to breeders</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="showActivity">
+                  <span>Show my activity status</span>
+                </label>
+              </div>
+              <div class="settings-section">
+                <h3>Danger Zone</h3>
+                <button class="btn btn-danger">Delete Account</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>PurfectFinds</h3>
+          <p>Connecting pet lovers with verified breeders and quality pet care.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="pets.html">Find Pets</a>
+          <a href="breeders.html">Breeders</a>
+          <a href="supplies.html">Supplies</a>
+          <a href="vet.html">Vet Consultation</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PurfectFinds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/profile.js"></script>
+</body>
+</html>
